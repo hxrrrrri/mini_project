@@ -1,0 +1,26 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- outer ring -->
+  <circle cx="120" cy="120" r="84" stroke="#e8714f" stroke-width="9" fill="none"/>
+
+  <!-- three dots sitting on the outer ring -->
+  <circle cx="120" cy="36" r="16" fill="#e8714f"/>
+  <circle cx="47.5" cy="162" r="16" fill="#e8714f"/>
+  <circle cx="192.5" cy="162" r="16" fill="#e8714f"/>
+
+  <!-- inner "C" ring, open toward upper-right where the arrow exits -->
+  <path d="M 159.5 99
+           A 46 46 0 1 0 159.5 141"
+        stroke="#e8714f" stroke-width="20" fill="none" stroke-linecap="round"/>
+
+  <!-- arrow shaft -->
+  <line x1="110" y1="134" x2="178" y2="78" stroke="#e8714f" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- arrowhead -->
+  <path d="M 196 64
+           L 165 73
+           L 178 86
+           Z" fill="#e8714f"/>
+
+  <!-- tail chevron / fletching notch -->
+  <path d="M 110 134 L 122 124 L 116 140 Z" fill="#e8714f"/>
+</svg>
