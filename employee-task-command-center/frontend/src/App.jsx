@@ -12,7 +12,7 @@ import ApiConsole from "./components/ApiConsole.jsx";
 import { api } from "./api.js";
 import { makeId } from "./ids.js";
 import { IconAlert, IconCheck, IconBolt, IconAssign, IconUsers, IconReports } from "./icons.jsx";
-import heroIllustration from "./assets/hero-illustration.svg";
+import logo from "./assets/logo-mark.svg";
 
 let toastSeq = 0;
 
@@ -322,7 +322,37 @@ export default function App() {
               </article>
             </div>
             <div className="network-graphic">
-              <img className="hero-illustration" src={heroIllustration} alt="Hand-drawn illustration of a profile, a settings panel with sliders, and a connected info card" />
+              <svg className="network-map-svg" viewBox="0 0 760 520" role="img" aria-label="Employee task command center capability map">
+                <g className="network-lines">
+                  <path d="M350.5 239.3L246 166" />
+                  <path d="M380.5 224L382 102" />
+                  <path d="M413.6 247L592 178" />
+                  <path d="M415.8 263.7L632 286" />
+                  <path d="M400.3 289.7L492 424" />
+                  <path d="M353.4 284.3L238 390" />
+                  <path d="M344.2 264.1L170 284" />
+                </g>
+
+                <g className="network-labels">
+                  <text x="236" y="156" textAnchor="middle">Employees</text>
+                  <text x="382" y="82" textAnchor="middle">API</text>
+                  <text x="606" y="170" textAnchor="start">Tasks</text>
+                  <text x="648" y="292" textAnchor="start">Priority</text>
+                  <text x="504" y="448" textAnchor="middle">Reports</text>
+                  <text x="224" y="414" textAnchor="middle">Updates</text>
+                  <text x="148" y="290" textAnchor="middle">Daily Flow</text>
+                </g>
+
+                <image
+                  className="network-center-mark"
+                  href={logo}
+                  x="344"
+                  y="224"
+                  width="72"
+                  height="72"
+                />
+                <circle className="network-center-ring" cx="380" cy="260" r="36" fill="none" />
+              </svg>
             </div>
           </section>
 

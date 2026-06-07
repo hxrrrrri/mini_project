@@ -2384,10 +2384,38 @@ h4 {
   place-items: center;
 }
 
-.hero-illustration {
-  width: min(640px, 100%);
+.network-map-svg {
+  width: min(760px, 100%);
   height: auto;
-  border-radius: 22px;
+  overflow: visible;
+}
+
+.network-lines path {
+  fill: none;
+  stroke: rgba(247, 244, 236, 0.18);
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
+}
+
+.network-labels text {
+  fill: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: #20201e;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.network-center-mark {
+  filter: drop-shadow(0 6px 22px rgba(232, 113, 79, 0.35));
+}
+
+.network-center-ring {
+  stroke: rgba(232, 113, 79, 0.35);
+  stroke-width: 1.4;
+  stroke-dasharray: 3 5;
 }
 
 .workflow-showcase {
