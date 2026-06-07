@@ -1,5 +1,7 @@
 # Employee Task Command Center
 
+🔗 **Live demo**: [frontend-flame-ten-68.vercel.app](https://frontend-flame-ten-68.vercel.app) (frontend on Vercel, backend on Render at [mini-project-f7aj.onrender.com](https://mini-project-f7aj.onrender.com))
+
 A premium, full-stack mini project for managing employees, assigning tasks, and
 tracking daily work — built as a single-page dashboard with a futuristic
 productivity aesthetic (glassmorphism panels, gradient stat cards, animated
