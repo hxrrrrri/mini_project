@@ -259,37 +259,59 @@ export default function App() {
           </div>
 
           <div className="hero-visual" aria-hidden="true">
-            <svg className="hero-project-svg" viewBox="0 0 640 560" role="img" aria-label="Task command center illustration">
+            <svg className="hero-project-svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-label="Employee Command Center icon">
               <defs>
-                <filter id="heroIconShadow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="#000000" floodOpacity="0.38" />
+                <filter id="softWhiteGlow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="2.6" result="blur" />
+                  <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1  0 1 0 0 1  0 0 1 0 1  0 0 0 .55 0" result="glow" />
+                  <feMerge><feMergeNode in="glow" /><feMergeNode in="SourceGraphic" /></feMerge>
                 </filter>
+                <filter id="orangeGlow" x="-40%" y="-40%" width="180%" height="180%">
+                  <feGaussianBlur stdDeviation="9" result="blur" />
+                  <feColorMatrix in="blur" type="matrix" values="0.87 0 0 0 0.87  0 0.45 0 0 0.45  0 0 0.34 0 0.34  0 0 0 .38 0" result="glow" />
+                  <feMerge><feMergeNode in="glow" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+                <radialGradient id="bgGlow" cx="50%" cy="50%" r="70%">
+                  <stop offset="0" stopColor="#171716" />
+                  <stop offset="1" stopColor="#141413" />
+                </radialGradient>
+                <linearGradient id="orange" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stopColor="#ff5b3d" />
+                  <stop offset="1" stopColor="#DE7356" />
+                </linearGradient>
               </defs>
-              <g filter="url(#heroIconShadow)">
-                <path className="hero-svg-line" d="M94 260C120 140 242 76 354 120C430 150 474 216 466 298" />
-                <path className="hero-svg-line thin" d="M468 298C456 404 374 486 260 492C190 496 132 470 96 426" />
-                <circle className="hero-svg-orb" cx="444" cy="144" r="64" />
 
-                <rect className="hero-svg-panel" x="132" y="184" width="318" height="258" rx="34" />
-                <path className="hero-svg-line" d="M176 246H370" />
-                <path className="hero-svg-line" d="M176 314H344" />
-                <path className="hero-svg-line" d="M176 382H308" />
+              <rect width="1536" height="1024" fill="#141413" />
+              <rect width="1536" height="1024" fill="url(#bgGlow)" opacity="0.68" />
 
-                <circle className="hero-svg-check" cx="390" cy="246" r="23" />
-                <path className="hero-svg-tick" d="M380 246l8 8l18-20" />
-                <circle className="hero-svg-check" cx="364" cy="314" r="23" />
-                <path className="hero-svg-tick" d="M354 314l8 8l18-20" />
-                <circle className="hero-svg-check" cx="328" cy="382" r="23" />
-                <path className="hero-svg-tick" d="M318 382l8 8l18-20" />
+              <g fill="none" stroke="#f7f7f4" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round" filter="url(#softWhiteGlow)">
+                <path d="M446 456 C482 250 672 130 875 135 C914 136 948 144 978 160" />
+                <path d="M445 529 C471 711 614 855 800 875 C898 884 990 836 1058 740" />
 
-                <path className="hero-svg-line connector" d="M132 312H68C50 312 38 300 38 282V224" />
-                <circle className="hero-svg-node" cx="38" cy="204" r="27" />
-                <path className="hero-svg-person" d="M27 212c4-10 12-15 21-15s17 5 21 15" />
-                <circle className="hero-svg-person-fill" cx="48" cy="190" r="8" />
+                <circle cx="309" cy="292" r="79" />
+                <path d="M275 326 C276 291 341 291 342 326" />
+                <path d="M308 371 L308 429 C308 467 339 493 377 493 L548 493" />
 
-                <path className="hero-svg-line connector" d="M450 336h58c22 0 40 18 40 40v52" />
-                <rect className="hero-svg-small-card" x="500" y="426" width="92" height="72" rx="18" />
-                <path className="hero-svg-tiny-line" d="M526 454h38M526 476h28" />
+                <path d="M933 344 L605 344 C573 344 550 368 550 401 L550 638 C550 671 574 695 607 695 L948 695 C985 695 1008 669 1008 635 L1008 433" />
+
+                <line x1="610" y1="437" x2="889" y2="437" />
+                <line x1="610" y1="523" x2="888" y2="523" />
+                <line x1="610" y1="609" x2="884" y2="609" />
+                <circle cx="914" cy="437" r="25" />
+                <circle cx="914" cy="523" r="25" />
+                <circle cx="914" cy="609" r="25" />
+
+                <path d="M1008 562 L1180 562 C1195 562 1207 574 1207 589 L1207 674" />
+                <rect x="1113" y="670" width="183" height="160" rx="31" />
+              </g>
+
+              <g fill="url(#orange)" filter="url(#orangeGlow)">
+                <circle cx="309" cy="269" r="20" />
+                <circle cx="1064" cy="304" r="117" />
+              </g>
+              <g stroke="url(#orange)" strokeWidth="9" strokeLinecap="round" filter="url(#orangeGlow)">
+                <line x1="1154" y1="737" x2="1250" y2="737" />
+                <line x1="1154" y1="777" x2="1250" y2="777" />
               </g>
             </svg>
           </div>
