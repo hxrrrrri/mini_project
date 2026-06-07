@@ -271,18 +271,11 @@ export default function App() {
                   <feColorMatrix in="blur" type="matrix" values="0.87 0 0 0 0.87  0 0.45 0 0 0.45  0 0 0.34 0 0.34  0 0 0 .38 0" result="glow" />
                   <feMerge><feMergeNode in="glow" /><feMergeNode in="SourceGraphic" /></feMerge>
                 </filter>
-                <radialGradient id="bgGlow" cx="50%" cy="50%" r="70%">
-                  <stop offset="0" stopColor="#171716" />
-                  <stop offset="1" stopColor="#141413" />
-                </radialGradient>
                 <linearGradient id="orange" x1="0" x2="1" y1="0" y2="1">
                   <stop offset="0" stopColor="#ff5b3d" />
                   <stop offset="1" stopColor="#DE7356" />
                 </linearGradient>
               </defs>
-
-              <rect width="1536" height="1024" fill="#141413" />
-              <rect width="1536" height="1024" fill="url(#bgGlow)" opacity="0.68" />
 
               <g fill="none" stroke="#f7f7f4" strokeWidth="15" strokeLinecap="round" strokeLinejoin="round" filter="url(#softWhiteGlow)">
                 <path d="M446 456 C482 250 672 130 875 135 C914 136 948 144 978 160" />
